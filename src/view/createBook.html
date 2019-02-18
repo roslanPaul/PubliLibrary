@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal JS Front-End App Example</title>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title is-1">Public Library: </h1>
+        <h2 class="subtitle is-2">Create a new book record</h2>
+        <form action="" id="Book">
+            <div class="field">
+                <label for="">ISBN:</label>
+                <div class="control">
+                    <input class="input" name="isbn" type="text" placeholder="XXXXXXXX">
+                </div>
+            </div>
+            <div class="field">
+                <label for="">TITLE:</label>
+                <div class="control">
+                    <input class="input" name="title" type="text" placeholder="Title">
+                </div>
+            </div>
+            <div class="field">
+                <label for="">YEAR:</label>
+                <div class="control">
+                    <input class="input" name="year" type="text" placeholder="----">
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" name="commit">Save</button>
+                </div>
+            </div>
+        </form>
+        <nav><a href="index.html">Back to main menu</a></nav>
+    </div>
+    
+    <script src="../ctrl/initialize.js"></script>
+    <script src="../model/Book.js"></script>
+    <script src="../view/createBook.js"></script>
+    <script>
+        window.addEventListener("load", pl.view.createBook.setupUserInterface);
+    </script>
+</body>
+</html>

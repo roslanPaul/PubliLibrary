@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Public Library: Update a book record</h1>
+    <form action="" id="Book">
+        <p>
+            <label for="">Select book:
+                <select name="selectBook"><option value=""> --- </option></select>
+            </label>
+        </p>
+        <p><label for="">ISBN: <input name="isbn"></label></p>
+        <p><label for="">Title: <input name="title"></label></p>
+        <p><label for="">Year: <input name="year"></label></p>
+        <p><button type="button" name="commit">Save changes</button></p>
+    </form>
+    <nav><a href="index.html">Back to main menu</a></nav>
+
+    <script src="../ctrl/initialize.js"></script>
+    <script src="../model/Book.js"></script>
+    <script src="../view/updateBook.js"></script>
+    <script>
+        window.addEventListener("load", pl.view.updateBook.setupUserInterface);
+    </script>
+</body>
+</html>
